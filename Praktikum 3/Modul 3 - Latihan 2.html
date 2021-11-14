@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <head>
+        <title>DOM - Azhar Rizki Zulma - 065001900001</title>
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: 150px 20px 190px 170px 20px 180px;
+            }
+            .grid {
+                padding: 2px;
+                font-size: 20px;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Form Data Diri</h1>
+        <hr>
+        <div class="grid-container">
+            <div class="grid"><label>Nama Depan</label></div>
+            <div class="grid"><label>:</label></div>
+            <div class="grid"><input type="text" class="TextField" value=""></div>
+            <div class="grid"><label>Nama Belakang</label></div>
+            <div class="grid"><label>:</label></div>
+            <div class="grid"><input type="text" class="TextField" value=""></div>
+            <div class="grid"><label>Alamat</label></div>
+            <div class="grid"><label>:</label></div>
+            <div class="grid"><input type="text" class="TextField" value=""></div>
+            <div class="grid"><label>Instagram</label></div>
+            <div class="grid"><label>:</label></div>
+            <div class="grid"><input type="text" class="TextField" value=""></div>
+            <div class="grid"><label>Umur</label></div>
+            <div class="grid"><label>:</label></div>
+            <div class="grid">
+                <input type="radio" name="umur" value="Under 20">
+                <label for="Under 20">Under 20</label>
+                <br>
+                <input type="radio" name="umur" value="20 - 40">
+                <label for="20-40">20 - 40</label>
+                <br>
+                <input type="radio" name="umur" value="40 - 60">
+                <label for="40-60">40 - 60</label>
+                <br>
+                <input type="radio" name="umur" value="60+">
+                <label for="60+">60+</label>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="grid"><label>Kebangsaan</label></div>
+            <div class="grid"><label>:</label></div>
+            <div class="grid">
+                <div>
+                    <select style="width: 175px; height: 20px;">
+                        <option value="Jepang">Jepang</option>
+                        <option value="Amerika">Amerika</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Inggris">Inggris</option>
+                    </select>
+                </div>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="grid"><label>Validasi</label></div>
+            <div class="grid"><label>:</label></div>
+            <div class="grid">
+                <input type="checkbox" id="checkbox" style="width: 20px; height: 20px;">
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="grid"><input type="button" onclick="show()" value="show"></div>
+        </div>
+        <script>
+            function show() {
+                const text = document.getElementsByClassName('TextField');
+                let umur = document.getElementsByName('umur');
+                let bangsa = document.getElementsByTagName('select')[0];
+                let chbx = document.getElementById('checkbox');
+                let outputrb;
+                let outputcb;
+                for (let i=0; i<umur.length; i++) {
+                    if (umur[i].checked) {
+                        outputrb = umur[i].value;
+                        break;
+                    }
+                }
+                for (let i=0, len=bangsa.options.length; i<len; i++){
+                    if (bangsa.options[i].selected === true) {
+                        outputcb = bangsa.options[i].value;
+                        break;
+                    }
+                }
+                if (chbx.checked) {
+                    alert(
+                        "\nNama: " + text[0].value + " " + text[1].value +
+                        "\nNama Depan: " + text[0].value +
+                        "\nNama Belakang: " + text[1].value +
+                        "\nAlamat: " + text[2].value +
+                        "\nInstagram: " + text[3].value +
+                        "\nUmur: " + outputrb +
+                        "\nKebangsaan: " + outputcb
+                    );
+                } else {
+                    alert("Silahkan Centang dibagian Validasi");
+                }
+            }
+        </script>
+    </body>
+</html>
