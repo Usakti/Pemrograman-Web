@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <head>
+        <link rel="shortcut icon" href="https://tugas.mineversal.com/user/assets/img/logo1.png"/>
+        <title>Praktikum Bootstrap</title>
+        <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'IBM Plex Mono';
+                font-size: 17px;
+                background-color: rgb(27, 27, 27)
+            }
+            a {
+                font-size: 20px;
+            }
+            #nav-custom {
+                background-color: rgb(27, 27, 27);
+                object-position: fixed;
+            }
+            #header, #footer {
+                background-color: rgb(34, 32, 32);
+                padding: 10px;
+            }
+            #jumbotron-custom {
+                background-color: rgb(48, 48, 48)
+            }
+            h1, p, h3, div, hr {
+                color: white;
+                border-color: white;
+                text-align: justify;
+            }
+            #submit-btn {
+                border: 1px solid white;
+                color: white;
+            }
+            #submit-btn:hover {
+                background-color: white;
+                color: black;
+            }
+            #table-color {
+                background-color: rgb(27, 27, 27);
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark" id="nav-custom">
+            <a class="navbar-brand">AZHAR RIZKI ZULMA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home"><i class="fa fa-fw fa-home"></i> HOME<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#table"><i class="fa fa-fw fa-folder"></i> TABLE</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-fw fa-globe"></i> OTHERS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://trisakti.ac.id/pedoman-and-artikel/artikel">TRISAKTI ARTICLE</a>
+                            <a class="dropdown-item" href="https://trisakti.ac.id/news">TRISAKTI NEWS</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://trisakti.ac.id">OTHER SITE</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" id="submit-btn" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <header id="header">
+            <br>
+            <div class="row">
+                <div class="col-12">
+                    <b>
+                        <h1 class="text-center">Praktikum CSS Framework - Bootstrap</h1>
+                        <h3 class="text-center">Azhar Rizky Zulma - 065001900001</h3>
+                    </b>
+                </div>
+            </div>
+            <br>
+        </header>
+        <br id="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <img src="https://image.psikolif.com/wp-content/uploads/2018/10/Logo-Universitas-Trisakti-Hitam.png" class="rounded mx-auto d-block" height="625px" width="644px" alt="ini gunung">
+                </div>
+                <div class="col-6">
+                    <div class="jumbotron mx-auto" id="jumbotron-custom">
+                        <h1 class="display-5">Universitas Trisakti</h1>
+                        <p class="lead">Universitas Trisakti merupakan salah satu perguruan 
+                            tinggi swasta di Indonesia. Perguruan tinggi ini didirikan oleh 
+                            Pemerintah Republik Indonesia pada tanggal 29 November 1965 melalui 
+                            Surat Keputusan Menteri PTIP Nomor 013/da/1965 yang ditandatangani 
+                            oleh Dr. Sjarif Thajeb.</p>
+                        <hr class="my-4">
+                        <p>Jl. Kyai Tapa No.1, Grogol Jakarta 11440</p>
+                        <p>Telp.: (62-21) 5663232 ext. 8128, 8140</p>
+                        <p>Fax: (62-21) 5671356</p>
+                        <p>E-mail: humas@trisakti.ac.id</p>
+                        <a class="btn btn-primary btn-lg" href="https://trisakti.ac.id" role="button">Go to site</a>
+                      </div>
+                </div>
+                <div class="col-12" id="table">
+                    <b>
+                        <h1 class="text-center">TABLE</h1>
+                        <br>
+                    </b>
+                </div>
+                <div class="col-12 float-left">
+                    <table class="table table-dark" id="table-color">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">NAMA</th>
+                                <th scope="col">NIM</th>
+                                <th scope="col">Alamat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Azhar Rizky Zulma</td>
+                                <td>065001900001</td>
+                                <td>Bintaro</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Muhammad Zidan</td>
+                                <td>064001900008</td>
+                                <td>Tenggarong</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Gading Sectio Aryoseto</td>
+                                <td>064001900022</td>
+                                <td>Tangerang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Nadiya Amanda Rizkania</td>
+                                <td>064001900003</td>
+                                <td>Kembangan</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Ivana Gabriella Manurung</td>
+                                <td>064001900001</td>
+                                <td>Bekasi</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br>
+        <footer id="footer">
+            <br>
+            <div class="copyright text-center">
+                &copy; Copyright <strong><span>Azhar Rizky Zulma</span></strong> 2020
+            </div>
+            <br>
+        </footer>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</html>
