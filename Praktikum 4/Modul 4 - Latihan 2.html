@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="jquery-ui.css" rel="stylesheet" type="text/css">
+    <head>
+        <title>Praktikum JQuery - Azhar Rizky Zulma - 065001900001</title>
+        <style>
+            * {
+                border: 1px solid black;
+                padding: 10px;
+                margin: 5px 10px;
+            }
+            h1, h2 {
+                text-align: center;
+            }
+            button {
+                background-color: lightblue;
+                width: 200px;
+            }
+            .list {
+                list-style: none;
+            }
+            .kuning {
+                background-color: lightyellow;
+            }
+            .birumuda {
+                background-color: lightblue;
+            }
+            #TextField {
+                width: 300px;
+            }
+            b, i {
+                border: none;
+                padding: none;
+                margin: none;
+                padding-left: 0px;
+                margin-left: 5px;
+            }
+            p {
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="judul">Azhar Rizki Zulma - 065001900001</h1>
+        <h2 class="sub-judul">Latihan JQuery</h2>
+        <div>
+            <p class="p1" id="nama" name="paragraf"></p>
+            <p class="p2" id="nim" name="paragraf"></p>
+            <p class="p3" id="univ" name="paragraf"></p>
+            <p class="p4" id="quote" name="paragraf"></p>
+        </div>
+        <img id="gambar" src="TIF.jpg" style="width: 200px; height: 200px;">
+        <div>
+            <ul>
+                <li id="list1" class="list">List 1</li>
+                <li id="list2" class="list">List 2</li>
+            </ul>
+        </div>
+        <form>
+            <input type="text" id="TextField">
+            <button class="submit" type="submit">Submit</button>        
+        </form>
+        <button class="start" id="btn-start">Start</button>
+        <script src="JQuery.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.start').click(function() {
+                    $('h2.sub-judul').hide();
+                    $('p').addClass('kuning');
+                    $('p.p1').append('Nama: Azhar Rizky Zulma');
+                    $('p.p2').append('NIM: 065001900001');
+                    $('p.p3').append('Kampus:<b>Universitas Trisakti</b>');
+                    $('p.p4').append('Quotes: butuh ijazah untuk menjadi seorang pegawai, tetapi ijazah tak diperlukan jika menjadi seorang pengusaha<i><b>- Azhar</b><i>');
+                    $('#gambar').attr('src', 'Trisakti.png');
+                    $('#gambar').css('background', 'aqua');
+                    $('.list').addClass('birumuda');
+                    $('.list:last').removeClass('birumuda');
+                });
+                $('form').submit(function() {
+                    let x = $('#TextField').val()
+                    alert("Hallo, " + x);
+                    event.preventDefault();
+                    $('.list').text(x);
+                });
+            });
+        </script>
+    </body>
+</html>
