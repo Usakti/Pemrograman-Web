@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="jquery-ui.css" rel="stylesheet" type="text/css">
+    <head>
+        <title>Praktikum JQuery - Azhar Rizky Zulma - 065001900001</title>
+        <style>
+            .demoHeaders {
+                margin-top: 2em;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: 250px 20px 200px;
+            }
+            .grid {
+                padding: 2px;
+                font-size: 20px;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 class="demoHeaders">Sistem Kendali Surat</h2>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Compose</a></li>
+                <li><a href="#tabs-2">Inbox</a></li>
+                <li><a href="#tabs-3">Outbox</a></li>
+            </ul>
+            <div id="tabs-1">
+                <div class="grid-container">
+                    <div class="grid">Pembuatan Surat Baru</div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"><label><b>No Surat</b></label></div>
+                    <div class="grid"><label>:</label></div>
+                    <div class="grid"><input type="text" class="textf" value=""></div>
+                    <div class="grid"><label><b>Perihal</b></label></div>
+                    <div class="grid"><label>:</label></div>
+                    <div class="grid"><input type="text" class="textf" value=""></div>
+                    <div class="grid"><label><b>Tanggal Surat</b></label></div>
+                    <div class="grid"><label>:</label></div>
+                    <div class="grid">
+                        <div id="datepicker"></div>
+                    </div>
+                    <div class="grid"><label><b>Kepada</b></label></div>
+                    <div class="grid"><label>:</label></div>
+                    <div class="grid">
+                        <select id="selectmenu" style="width: 235px; height: 5px;">
+                            <option></option>
+                            <option value="Nadiya">Nadiya</option>
+                            <option value="Amanda">Amanda</option>
+                            <option value="Rizkania">Rizkania</option>
+                        </select>
+                    </div>
+                    <div class="grid"><label><b>Catatan</b></label></div>
+                    <div class="grid"><label>:</label></div>
+                    <div class="grid"><textarea id="textarea" name="textarea" style="width:300px; height: 100px;" value=""></textarea></div>
+                    <div class="grid"><input id="submit" type="button" value="Submit"><input id="review" type="button" value="Review"></div>
+            </div>
+            <div id="tabs-2">Kumpulan Surat Yang Masuk</div>
+            <div id="tabs-3">Kumpulan Surat Yang Telah Terkirim</div>
+        </div>
+        <script src="external/jquery/jquery.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script>
+            $("#tabs").tabs();
+            $("#selectmenu").selectmenu();
+            $("#datepicker").datepicker({ inline: true });
+            $("#review").click(function () {
+                if ($('.textf:eq(0)').val() == "") {
+                    alert("Anda harus mengisi data lengkap");
+                } else if ($('.textf:eq(1)').val() == "") {
+                    alert("Anda harus mengisi data lengkap");
+                } else if ($('#datepicker').val() == "") {
+                    alert("Anda harus mengisi data lengkap");
+                } else if ($('#selectmenu').val() == "") {
+                    alert("Anda harus mengisi data lengkap");
+                } else if ($('#textarea').val() == "") {
+                    alert("Anda harus mengisi data lengkap");
+                } else {
+                    alert("Semua Lengkap! Silahkan Submit");
+                }
+            });
+            $("#submit").click(function () {
+                alert(
+                    "\nNo Surat: " + $('.textf:eq(0)').val() +
+                    "\nPerihal: " + $('.textf:eq(1)').val() +
+                    "\nTanggal: " + $('#datepicker').val() +
+                    "\nKepada: " + $('#selectmenu').val() +
+                    "\nCatatan: " + $('#textarea').val()
+                );
+            });
+        </script>
+    </body>
+</html>
