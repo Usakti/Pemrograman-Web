@@ -1,0 +1,20 @@
+/* External CSS */
+.judul {
+    color: white;
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+
+p {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+#p1 {
+    color: red;
+    font-style: italic;
+}
