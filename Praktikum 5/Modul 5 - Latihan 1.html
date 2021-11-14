@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <head>
+        <link rel="shortcut icon" href="https://tugas.mineversal.com/user/assets/img/logo1.png"/>
+        <title>Praktikum Bootstrap</title>
+        <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'IBM Plex Mono';
+                font-size: 17px;
+                background-color: rgb(27, 27, 27)
+            }
+            a {
+                font-size: 20px;
+            }
+            #nav-custom {
+                background-color: rgb(27, 27, 27);
+                object-position: fixed;
+            }
+            #header, #footer {
+                background-color: rgb(34, 32, 32);
+                padding: 10px;
+            }
+            #jumbotron-custom {
+                background-color: rgb(48, 48, 48)
+            }
+            h1, p, h3, div, hr {
+                color: white;
+                border-color: white;
+            }
+            #submit-btn {
+                border: 1px solid white;
+                color: white;
+            }
+            #submit-btn:hover {
+                background-color: white;
+                color: black;
+            }
+            .card-bg {
+                background-color: rgb(48, 48, 48)
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark" id="nav-custom">
+            <a class="navbar-brand" href="#"><img src="https://tugas.mineversal.com/user/assets/img/logo.png" width="300px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fa fa-fw fa-home"></i> HOME<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-fw fa-folder"></i> COVID DATA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-fw fa-user"></i> ABOUT ME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-fw fa-globe"></i> OTHERS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">MINEVERSAL TEMPLATE</a>
+                            <a class="dropdown-item" href="#">MINEVERSAL NEWS</a>
+                            <a class="dropdown-item" href="#">BEAUTY</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">OTHER SITE</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" id="submit-btn" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://tugas.mineversal.com/user/assets/img/img1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Milky Way Galaxy</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://tugas.mineversal.com/user/assets/img/img2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Moon and Andromeda</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://tugas.mineversal.com/user/assets/img/img3.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>The Moon</h5>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <header id="header">
+            <br>
+            <div class="row text-center">
+                <div class="col-12">
+                    <b>
+                        <h1>Praktikum CSS Framework - Bootstrap</h1>
+                        <h3>Azhar Rizky Zulma - 065001900001</h3>
+                    </b>
+                </div>
+            </div>
+            <br>
+        </header>
+        <br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <img src="https://tugas.mineversal.com/user/assets/img/bromo.png" class="rounded mx-auto d-block" height="400px" width="644px" alt="ini gunung">
+                </div>
+                <div class="col-6">
+                    <div class="jumbotron mx-auto" id="jumbotron-custom">
+                        <h1 class="display-4">Bromo Mountain</h1>
+                        <p class="lead">Bromo Mountain Is a Vulcanic Mountain in East Java, Indonesia</p>
+                        <hr class="my-4">
+                        <p>Bromo Tengger Semeru National Park</p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                      </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-3">
+                    <div class="card card-bg mx-auto" style="width: 18rem;">
+                        <img src="https://tugas.mineversal.com/user/assets/img/bali.png" class="card-img-top" alt="ini foto">
+                        <div class="card-body">
+                            <h5 class="card-title">Bali Travelling</h5>
+                            <p class="card-text">Rp.1.000.000/Day</p>
+                            <a href="#" class="btn btn-primary">Buy Ticket Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card card-bg mx-auto" style="width: 18rem;">
+                        <img src="https://tugas.mineversal.com/user/assets/img/lombok.png" class="card-img-top" alt="ini foto">
+                        <div class="card-body">
+                            <h5 class="card-title">Lombok Travelling</h5>
+                            <p class="card-text">Rp.1.000.000/Day</p>
+                            <a href="#" class="btn btn-primary">Buy Ticket Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card card-bg mx-auto" style="width: 18rem;">
+                        <img src="https://tugas.mineversal.com/user/assets/img/bunaken.png" class="card-img-top" alt="ini foto">
+                        <div class="card-body">
+                            <h5 class="card-title">Bunaken Travelling</h5>
+                            <p class="card-text">Rp.1.500.000/Day</p>
+                            <a href="#" class="btn btn-primary">Buy Ticket Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card card-bg mx-auto" style="width: 18rem;">
+                        <img src="https://tugas.mineversal.com/user/assets/img/toba.png" class="card-img-top" alt="ini foto">
+                        <div class="card-body">
+                            <h5 class="card-title">Toba Travelling</h5>
+                            <p class="card-text">Rp.900.000/Day</p>
+                            <a href="#" class="btn btn-primary">Buy Ticket Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <footer id="footer">
+            <br>
+            <div class="copyright text-center">
+                &copy; Copyright <strong><span>Azhar Rizky Zulma</span></strong> 2020
+            </div>
+            <br>
+        </footer>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</html>
